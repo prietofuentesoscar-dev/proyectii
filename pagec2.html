@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style/style2.css">
+  <title>paginmotatatatata</title>
+</head>
+
+<body>
+  <!--TITULO-->
+  <header id="titulo">
+    ¿Qué enseñamos?
+  </header>
+
+  <!--SLIDER DE IMAGENES-->
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/one one.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/two two.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/three three.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/four.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+
+
+  <!--BLOQUES DE CONTENIDO-->
+  <main class="tituloss">
+    <header> Les enseñamos a...</header>
+  </main>
+  <main class="texto" id="contenido1">
+    <div class="primera">
+      Con la intención de que ellos sepan un poco más de la Constitución política de Colombia, seguimos esa línea,
+      definimos las 3 ramas de poder público que hace cada una y que
+      actividades son las que tienen que llevar a cabo para que haya equilibrio en el país
+    </div>
+  </main>
+  <main>
+    <div class="segunda">
+      Les explicamos de manera creativa que ellos tienen deberes y derechos como ciudadanos, también les mostramos
+      cuales eran cada uno de sus derechos, además de cuales son sus deberes y el porque es importante que ellos cumplan
+      con estos
+    </div>
+  </main>
+
+  <main class="texto">
+    <div class="tercera">
+      Todo esto haciendolo estando enfocados en el área de sociales y el área de ética, para así enseñar a los niños la
+      importancia de saber no solo nuestros derechos sino también como respetar de manera correcta a los demás
+    </div>
+  </main>
+  <main>
+    <div class="cuarta">
+      También después de haber presenciado múltiples situaciones que demuestran en varios casos poca compañía de los
+      padres, tratamos de tomar un rol extra donde intentamos explicarles porque muchas de las actitudes y cosas que
+      hacian hacia sus compañeros no eran buenas para la sana convivencia del salón
+    </div>
+  </main>
+
+
+  <!--BOTON DE REGRESO PAGINA1-->
+  <a class="backup" href="index.html">
+    <img src="img/home.png" width="50px"></a>
+
+
+  <!--------script------->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</body>
+
+</html>

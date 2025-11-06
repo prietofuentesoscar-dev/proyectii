@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentossss</title>
+</head>
+
+<body>
+  <!--MENÙ PRINCIPAL-->
+  <nav class="Menú">
+    <!--TITULO DE menu-->
+    <div class="titulo_menu">
+      Proyecto Luis Orjuela
+    </div>
+    <div class="Menu_principal">
+      <a class="botones" href="#contenido1">Detalles del proyecto</a>
+      <a href="pagec2.html">¿Qué enseñamos?</a>
+      <a href="pagec3.html">¿Cómo lo enseñamos?</a>
+      <a href="#contenido5">¿Por qué hacemos esto?</a>
+    </div>
+  </nav>
+  <!--SLIDER DE IMAGENES-->
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/niños.avif" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/niñosaprendiendo.webp" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/colegio.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+
+  <!--------TEXTO------->
+  <main class="titulo">
+    Objetivos del proyecto
+
+  </main>
+  <!--CAJAS DE COLUMNAS-->
+  <main class="texto1" id="contenido1">
+    <div class="primera">
+      Se busca incentivar el aprendizaje respecto a varios temas en colegios públicos
+    </div>
+    <div class="segunda">
+      Crear un ambiente lúdico agradable para los estudiantes, donde sean libres de participar
+    </div>
+    <div class="tercera">
+      Buscamos enseñar a los estudiantes acerca de la constitución política de Colombia mediante la ética y los valores
+    </div>
+  </main>
+
+  <!---------Detalles----------->
+  <main class="titulo">
+    Más detalles acerca de nosotros
+  </main>
+
+  <main class="texto" id="contenido2">
+    <div class="izquierda">
+      Introducción del proyecto
+    </div>
+    <div class="derecha">
+      Desde la antigüedad el ser humano ha buscado vivir en paz cuando se encuentra en comunidad, esto lo ha intentado
+      con la creación de normas y acuerdos, los cuales evolucionaron hasta convertirse en los principios éticos y
+      valores que orientan las acciones individuales o colectivas, lo que se busca es ayudar a los niños del IEM Luis
+      Orjuela a conocer mejor estos principios
+    </div>
+  </main>
+  <main class="texto" id="contenido3">
+    <div class="izquierda">
+      Justificación
+    </div>
+    <div class="derecha">
+      Este proyecto trata sobre la importancia de la democracia y convivencia dentro de la sociedad garantizando el
+      apoyo de la constitución política y la responsabilidad que se tiene para una buena convivencia
+    </div>
+  </main>
+  <main class="texto" id="contenido4">
+    <div class="centrofinal">
+      Para lograr nuestros objetivos nos comprometimos con los estudiantes de grado quinto realizando de manera lineal y
+      progresiva ciertas actividades que nos ayudaban a que los estudiantes tengas más interés sobre el tema,
+      aprendiendo así con mayor facilidad las distintas temáticas que enfrentabamos
+    </div>
+  </main>
+  <main class="texto6" id="contenido5">
+    <div class="pqqq">¿Por qué hacemos esto?</div>
+  </main>
+  <main class="texto" id="contenido6">
+    <div class="piedepagina">
+      Muchos dirán que nuestras actividades fueron llevadas a cabo solo por conseguir la nota, pero esto es totalmente
+      falso, pues realmente nosotros hicimos esto con la intención de apoyar de forma sincera a los niños ya que tenemos
+      muy en cuenta que estos niños pasan por situaciones difíciles y que a pesar del esfuerzo de los profesores muchas
+      veces estos jovenes no logran llevar a cabo un aprendizaje a meno por esa razón nosotros llevamos a cabo estas
+      actividades, no solo con todo el cariño del mundo sino también con la paciencia y una preparación detallada para
+      cado uno de los jovenes del salón de grado quinto
+    </div>
+  </main>
+  <!--------script------->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</body>
+
+</html>
